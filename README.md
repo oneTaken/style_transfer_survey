@@ -68,7 +68,7 @@ Points:
 More Details:
 + primary criterion is MSELoss.
 + loss_content is criterion(F2(x), F2(y))
-+ GramMatrix **G** is :
++ GramMatrix **G** has nothing with the image size, is :
 ```python
 def gram_matrix(y):
     (b, ch, h, w) = y.size()
@@ -87,10 +87,15 @@ Size Analysis:
 + `s.shape=(m2, n2, 3)`
 + `batch_size = b`
 + T downsample two times, both `int(ceil(x/2))`, this will bring size difference. 
-For example, input image is size`(3,33,33)`, output size is `(3,36,36)`. Saying proper.
+For example, input image is size`(3,33,33)`, output size is `(3,36,36)`. 
+Same as F. Saying proper.
 + `gm_s[i]` size is `(b, ch[i], ch[i])`
 
 Think About The Model:
 +  The VGG16 is just a representation on high dimension. It can be replaced by any other 
 similar pretrained model.
 + The four middle-level representations can also be chosen as other.
++ Init convolution layer has a big kernel size to have a bigger receptive field.
+
+# Paper Reading
++ [Perceptual Losses for Real-Time Style Transfer and Super-Resolution](./Perceptual_Losses.md)
