@@ -1,7 +1,12 @@
 # style_transfer_survey
 A survey on style_transfer from the original fantasy paper till now.
 
-# paper
+Contents:
++ [Papers](#Papers)
++ [Practice](#Practice)
++ [Paper Reading Notes](#Paper-Reading-Notes)
+
+# Paper
 + A Neural Algorithm of Artistic Style
     + arxiv: [1508.06576](https://arxiv.org/abs/1508.06576)
     + github: https://github.com/jcjohnson/neural-style
@@ -48,7 +53,7 @@ A survey on style_transfer from the original fantasy paper till now.
     + github: [author torch](https://github.com/Yijunmaverick/UniversalStyleTransfer), [third pytorch](https://github.com/sunshineatnoon/PytorchWCT)
     + 
     
-# practice
+# Practice
 First, pytorch has a official example [fast_neural_style](https://github.com/pytorch/examples/tree/master/fast_neural_style).
 
 Points:
@@ -97,5 +102,5 @@ similar pretrained model.
 + The four middle-level representations can also be chosen as other.
 + Init convolution layer has a big kernel size to have a bigger receptive field.
 
-# Paper Reading
+# Paper Reading Notes
 + [Perceptual Losses for Real-Time Style Transfer and Super-Resolution](./Perceptual_Losses.md)
