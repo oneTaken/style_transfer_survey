@@ -1,6 +1,7 @@
 # style_transfer_survey
 A survey on style_transfer from the original fantasy paper till now.
 
+# paper
 + A Neural Algorithm of Artistic Style
     + arxiv: [1508.06576](https://arxiv.org/abs/1508.06576)
     + github: https://github.com/jcjohnson/neural-style
@@ -50,8 +51,46 @@ A survey on style_transfer from the original fantasy paper till now.
 # practice
 First, pytorch has a official example [fast_neural_style](https://github.com/pytorch/examples/tree/master/fast_neural_style).
 
-points:
+Points:
 
-$$loss =\alpha*loss_{content} + \beta * loss_{style}$$
-$$y=TransferNet(x)$$
-$$loss_{content}=MSELoss(\Gamma(x),\Gamma(y))$$ 
++ training phase
+    + content image **x**
+    + style image **s**
+    + pretrained model **F**[1,2,3,4], different middle-level feature representations on high dimension, 
+    (VGG16). Freezed weight parameters
+    + Style Transfer Model **T** , a FCN model with size invariant
+    + `loss = weight_content * loss_content + weight_style * loss_style`
++ evaluating phase
+    + content image x
+    + trained Style Transfer Model 
+    + styled image y = **T(x)**
+
+More Details:
++ primary criterion is MSELoss.
++ loss_content is criterion(F2(x), F2(y))
++ GramMatrix **G** is :
+```python
+def gram_matrix(y):
+    (b, ch, h, w) = y.size()
+    features = y.view(b, ch, w * h)
+    features_t = features.transpose(1, 2)
+    gram = features.bmm(features_t) / (ch * h * w)
+    return gram
+```
++ `gm_s = [G(F1(s)), G(F2(s)), G(F3(s)), G(F4(s))]`
++ `gm_y = [G(F1(y)), G(F2(y)), G(F3(y)), G(F4(y))]`
++ `loss_style = sum([MSELoss(gm_s[i], gm_y[i]) for i in range(len(gm_s))])`
++ padding is reflection, not constant 0
+
+Size Analysis:
++ `x.shape=(m1, n1, 3)`
++ `s.shape=(m2, n2, 3)`
++ `batch_size = b`
++ T downsample two times, both `int(ceil(x/2))`, this will bring size difference. 
+For example, input image is size`(3,33,33)`, output size is `(3,36,36)`. Saying proper.
++ `gm_s[i]` size is `(b, ch[i], ch[i])`
+
+Think About The Model:
++  The VGG16 is just a representation on high dimension. It can be replaced by any other 
+similar pretrained model.
++ The four middle-level representations can also be chosen as other.
