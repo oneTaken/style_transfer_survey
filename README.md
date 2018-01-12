@@ -51,6 +51,7 @@ A survey on style_transfer from the original fantasy paper till now.
 First, pytorch has a official example [fast_neural_style](https://github.com/pytorch/examples/tree/master/fast_neural_style).
 
 points:
+
 $$loss =\alpha*loss_{content} + \beta * loss_{style}$$
 $$y=TransferNet(x)$$
 $$loss_{content}=MSELoss(\Gamma(x),\Gamma(y))$$ 
