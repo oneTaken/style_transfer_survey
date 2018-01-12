@@ -1,11 +1,11 @@
 Content:
 + [Project Page](https://cs.stanford.edu/people/jcjohns/eccv16/)
-+ [References](#References)
-+ [Background](#Background)
-+ [Contribution](#Contribution)
-+ [Intuition](#Intuition)
-+ [Method](#Method)
-+ [Shortcomings](#Shortcomings)
++ [References](#references)
++ [Background](#background)
++ [Contribution](#contribution)
++ [Intuition](#intuition)
++ [Method](#method)
++ [Shortcomings](#shortcomings)
 
 #### References
 + [translation](https://www.jianshu.com/p/b728752a70e9)

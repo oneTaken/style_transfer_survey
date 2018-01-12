@@ -2,9 +2,9 @@
 A survey on style_transfer from the original fantasy paper till now.
 
 Contents:
-+ [Papers](#Papers)
-+ [Practice](#Practice)
-+ [Paper Reading Notes](#Paper-Reading-Notes)
++ [Papers](#papers)
++ [Practice](#practice)
++ [Paper Reading Notes](#paper-reading-notes)
 
 # Paper
 + A Neural Algorithm of Artistic Style
@@ -51,7 +51,6 @@ Contents:
 + Universal Style Transfer via Feature Transforms
     + arxiv: [1705.08086](https://arxiv.org/abs/1705.08086), also [NIPS 2017]()
     + github: [author torch](https://github.com/Yijunmaverick/UniversalStyleTransfer), [third pytorch](https://github.com/sunshineatnoon/PytorchWCT)
-    + 
     
 # Practice
 First, pytorch has a official example [fast_neural_style](https://github.com/pytorch/examples/tree/master/fast_neural_style).
