@@ -5,6 +5,8 @@ Contents:
 + [Papers](#papers)
 + [Practice](#practice)
 + [Paper Reading Notes](#paper-reading-notes)
++ [Code Myself](#code-myself)
++ [References](#references)
 
 # Paper
 + A Neural Algorithm of Artistic Style
@@ -20,6 +22,8 @@ Contents:
     + github: [author torch](https://github.com/jcjohnson/fast-neural-style), [third pytorch](https://github.com/abhiskk/fast-neural-style)
     + translation: https://www.jianshu.com/p/b728752a70e9
     + webpage: [project page](https://cs.stanford.edu/people/jcjohns/eccv16/)
++ Incorporating long-range consistency in CNN-based texture generation
+    + arxiv: [1606.01286](https://arxiv.org/abs/1606.01286)
 + Instance Normalization: The missing Ingredient for Fast Stylization
     + arxiv: [1607.08022](https://arxiv.org/abs/1607.08022)
     + github: [author torch](https://github.com/DmitryUlyanov/texture_nets)
@@ -40,6 +44,8 @@ Contents:
         + http://blog.csdn.net/wyl1987527/article/details/70476044
         + http://blog.csdn.net/Hungryof/article/details/61195783
         + http://mathworld.wolfram.com/FrobeniusNorm.html
++ Demystifying Neural Style Transfer
+    + arxiv: [1701.01036](https://arxiv.org/abs/1701.01036)
 + Arbitrary Style Transfer in Real-time with Adaptive Instance Normalization 
     + arxiv: [1703.06868](https://arxiv.org/abs/1703.06868), also [ICCV 2017]()
     + github: [author torch](https://github.com/xunhuang1995/AdaIN-style), [third pytorch](https://github.com/naoto0804/pytorch-AdaIN)
@@ -48,6 +54,9 @@ Contents:
     + arxiv: [1703.07511](https://arxiv.org/abs/1703.07511)
     + github: [author torch](https://github.com/luanfujun/deep-photo-styletransfer), https://github.com/LouieYang/deep-photo-styletransfer-tf
     + translation: http://blog.csdn.net/cicibabe/article/details/70868746
++ Neural Style Transfer: A Review
+    + arxiv: [1705.04058](https://arxiv.org/abs/1705.04058)
+    + github: https://github.com/ycjing/Neural-Style-Transfer-Papers
 + Universal Style Transfer via Feature Transforms
     + arxiv: [1705.08086](https://arxiv.org/abs/1705.08086), also [NIPS 2017]()
     + github: [author torch](https://github.com/Yijunmaverick/UniversalStyleTransfer), [third pytorch](https://github.com/sunshineatnoon/PytorchWCT)
@@ -103,3 +112,8 @@ similar pretrained model.
 
 # Paper Reading Notes
 + [Perceptual Losses for Real-Time Style Transfer and Super-Resolution](./Perceptual_Losses.md)
+
+# Code Myself
++ [fast style transfer](https://github.com/oneTaken/pytorch_fast_style_transfer)
+# References
++ [A Brief Summary on Neural Style Transfer](https://sunshineatnoon.github.io/posts/2017/05/blog-post-1/)
