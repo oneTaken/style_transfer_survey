@@ -1,14 +1,14 @@
 # style_transfer_survey
 A survey on style_transfer from the original fantasy paper till now.
 
-Contents:
+**Contents**:
 + [Papers](#papers)
 + [Practice](#practice)
 + [Paper Reading Notes](#paper-reading-notes)
 + [Code Myself](#code-myself)
 + [References](#references)
 
-# Paper
+# Papers
 + A Neural Algorithm of Artistic Style
     + arxiv: [1508.06576](https://arxiv.org/abs/1508.06576)
     + github: https://github.com/jcjohnson/neural-style
